@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="icon" type="image/x-icon" href="favico.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><img src="logo.png" alt="Logo" class="nav-logo"></div>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Web Developer | Designer | Creative Thinker</p>
+            <div class="social-links">
+                <a href="https://instagram.com/trvngdh" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/septarotraviangadha" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Active student majoring in Informatics who is trained to provide innovative digital solutions, analytical thinking and excellent detail orientation, with various leadership experiences as event chairman and active in various committees, and mastering Web Development, UI/UX Design, basic Computer Networking, and MySQL Database. Adaptive personality, fast learner and able to work under pressure both individually and in group dynamics with excellent time management, teamwork, and leadership skills.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="ecommerce.jpg" alt="E-Commerce Website">
+                <h3>E-Commerce Platform</h3>
+                <p>A full-featured online shopping platform built with React and Node.js. Features include user authentication, product management, and payment integration.</p>
+            </div>
+            <div class="project-card">
+                <img src="taskmanagemen.jpg" alt="Task Management App">
+                <h3>Task Management App</h3>
+                <p>A collaborative task management application with real-time updates, team workspace, and progress tracking features.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://instagram.com/trvngdh" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/septarotraviangadha" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
