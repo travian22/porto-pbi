@@ -54,23 +54,18 @@ contactForm.addEventListener('submit', function(e) {
 });
 
 // Navbar scroll effect
-let lastScrollTop = 0;
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        navbar.style.transform = 'translateY(-100%)';
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        // Scrolling up
-        navbar.style.transform = 'translateY(0)';
+        navbar.classList.remove('scrolled');
     }
-    lastScrollTop = scrollTop;
 });
 
-// Add animation to project cards when they come into view
+// Add animation to project cards and skill items when they come into view
 const projectCards = document.querySelectorAll('.project-card');
+const skillItems = document.querySelectorAll('.skill-item');
 
 const observerOptions = {
     threshold: 0.5
@@ -86,9 +81,15 @@ const observer = new IntersectionObserver(function(entries, observer) {
     });
 }, observerOptions);
 
-projectCards.forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(50px)';
-    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(card);
-});
+const animateItems = (items) => {
+    items.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(50px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        item.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(item);
+    });
+};
+
+animateItems(projectCards);
+animateItems(skillItems);
